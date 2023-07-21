@@ -1,0 +1,6 @@
+.btn{
+    @apply  bg-pink-500 p-[0.4rem] px-9 rounded-md text-gray-100 font-medium text-lg hover:bg-pink-600 transition-all;
+}
+.icon{
+    @apply w-10 h-10 p-1 hover:bg-black hover:bg-opacity-10 rounded cursor-pointer transition-opacity;
+}

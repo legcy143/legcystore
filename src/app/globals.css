@@ -1,27 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "../tailwind-css/style.css";
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+*{
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+
+html{
+  user-select: none
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+
+body{
+  @apply  flex flex-col  bg-no-repeat;
+  background: linear-gradient(145deg, rgb(255, 228, 232) , rgb(225, 230, 255) , white);
+  min-height: 100vh;
 }
