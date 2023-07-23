@@ -18,11 +18,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`scrollbar ${inter.className}`} suppressHydrationWarning={true} >
         <Navbar />
-        {children}
+        <section className='w-[99%] mx-auto max-w-7xl'>
+            {children}
+        </section>
         <Footer />
-        </body>
+      </body>
     </html>
   )
 }

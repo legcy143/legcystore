@@ -2,39 +2,48 @@
 @import "./nav.css";
 
 .flex-center {
-    @apply flex flex-row items-center justify-center
+  @apply flex flex-row items-center justify-center
 }
 
 .logo {
-    @apply text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-pink-600
+  @apply text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-pink-600
+}
+
+.title-primary {
+  @apply text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-pink-700 text-center relative w-fit mx-auto 
 }
 
 .search {
-    @apply bg-white flex flex-row items-center justify-center p-[0.4rem] rounded w-[70%] max-w-md
+  @apply bg-white flex flex-row items-center justify-center p-[0.4rem] rounded w-[70%] max-w-md
 }
 
 .search input {
-    @apply h-full w-full bg-transparent outline-none
+  @apply h-full w-full bg-transparent outline-none
+}
+
+.zero-scrollbar::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
 }
 
 .scrollbar::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-  }
+  width: 8px;
+  height: 8px;
+}
 
-  /* Styling the scrollbar thumb (the moving part) */
-  .scrollbar::-webkit-scrollbar-thumb {
-    background-color: #888;
-    border-radius: 8px;
-  }
+/* Styling the scrollbar thumb (the moving part) */
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 8px;
+}
 
-  /* Styling the scrollbar track (the non-moving part) */
-  .scrollbar::-webkit-scrollbar-track {
-    background-color: #f1f1f1;
-    border-radius: 8px;
-  }
+/* Styling the scrollbar track (the non-moving part) */
+.scrollbar::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  border-radius: 8px;
+}
 
-  /* Optional: Add some shadows to the scrollbar thumb */
-  .scrollbar::-webkit-scrollbar-thumb:hover {
-    background-color: #555;
-  }
+/* Optional: Add some shadows to the scrollbar thumb */
+.scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}

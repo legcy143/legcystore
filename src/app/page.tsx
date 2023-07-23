@@ -1,22 +1,28 @@
 "use client"
-import { BasicCard } from '@/GlobalComponents/Card';
-import Image from 'next/image'
-import { useEffect } from 'react';
+import { ProjectCard, LayoutStoreGroup } from '@/GlobalComponents/Card';
+import { ProjectDetailBasic , ProjectDetailAdvance ,ProjectDetailIntermediate , ProjectDetail} from '@/DataHandler/ProjectDetail';
+import { useRouter } from 'next/navigation'
 
 
 export default function Home() {
+  let navigation:any = useRouter()
   return ( 
     <main>
-      <section className='flex-center flex-col md:flex-row gap-1 p-1'>
-      <BasicCard />
-      <BasicCard /> 
-      <BasicCard /> 
-      <BasicCard /> 
-      </section>
-      <h1 className="font-bold text-5xl m-2 mt-10">
-        start this project soon v 0.2
-      </h1>
-        <button className='btn'>button</button>
+      <LayoutStoreGroup title="basic">
+        {ProjectDetailBasic.map((e:ProjectDetail , i:number , k:Array<ProjectDetail>)=>{
+          return <ProjectCard  key={e._id} name={e.name} description={e.description} img={e.img} onClick={()=>{navigation.push(e.route)}}/>
+        })}
+      </LayoutStoreGroup>
+      <LayoutStoreGroup title="intermediate">
+      {ProjectDetailIntermediate.map((e:ProjectDetail , i:number , k:Array<ProjectDetail>)=>{
+          return <ProjectCard  key={e._id} name={e.name} description={e.description} img={e.img} onClick={()=>{navigation.push(e.route)}}/>
+        })}
+      </LayoutStoreGroup>
+      <LayoutStoreGroup title="advance">
+      {ProjectDetailAdvance.map((e:ProjectDetail , i:number , k:Array<ProjectDetail>)=>{
+          return <ProjectCard  key={e._id} name={e.name} description={e.description} img={e.img} onClick={()=>{navigation.push(e.route)}}/>
+        })}
+      </LayoutStoreGroup>
     </main>
   )
 }
